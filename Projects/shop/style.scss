@@ -1,0 +1,1502 @@
+$mainColor: rgb(241, 109, 127);
+$fontFamily: 'Lato', sans-serif;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontFamily;
+}
+
+// позиционирование всей страницы по центру
+
+.center {
+  padding: 0 calc(50% - 570px);
+}
+
+// убираем у всех ссылок подчеркивания
+
+a {
+  text-decoration: none;
+}
+
+// стилизация основных кнопок на сайте
+
+.button {
+  height: 38px;
+  width: 130px;
+  font-family: $fontFamily;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  text-align: right;
+  letter-spacing: 0.03em;
+  line-height: 32px;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// логотип
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-right: 13px;
+  }
+
+  &__name {
+    font-family: $fontFamily;
+    font-size: 27px;
+    font-weight: 300;
+    color: rgba(34, 34, 34, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 32px;
+    text-transform: uppercase;
+
+    &__red {
+      font-weight: 900;
+      color: $mainColor;
+      letter-spacing: 0.03em;
+    }
+  }
+}
+
+// header
+
+.header {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(236, 236, 236, 1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-left: 37px;
+
+    &_text {
+      height: 38px;
+      width: 317px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(230, 230, 230, 1);
+      border-radius: 0 3px 3px 0;
+      padding: 0 38px 0 16px;
+      font-family: $fontFamily;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(164, 164, 164, 1);
+      letter-spacing: 0.03em;
+      line-height: 32px;
+      outline: none;
+
+    }
+
+    &_name {
+      height: 38px;
+      width: 87px;
+      box-sizing: border-box;
+      font-family: $fontFamily;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(34, 34, 34, 1);
+      background-color: #f7f7f7;
+      text-align: right;
+      letter-spacing: 0.03em;
+      line-height: 32px;
+      outline: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 3px 0 8px;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: '\25B6';
+        color: #6f6e6e;
+        font-size: 12px;
+      }
+    }
+
+    &_browse[open]>summary::after {
+      content: '\25bc';
+    }
+
+  }
+
+  &__button {
+    height: 38px;
+    width: 38px;
+    font-size: 14px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    background-color: rgba(255, 255, 255, 1);
+    text-align: right;
+    letter-spacing: 0.03em;
+    line-height: 32px;
+    margin-left: -38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  &__cart {
+    margin-right: 26px;
+  }
+
+}
+
+// навигация
+
+.nav {
+  background-color: rgba(255, 255, 255, 1);
+
+  .menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    &__link {
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(34, 34, 34, 1);
+      text-transform: uppercase;
+      padding: 19px;
+      display: block;
+      margin-bottom: 3px;
+
+      &:hover {
+        border-bottom: 3px solid rgba(239, 91, 112, 1);
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// главная картинка с текстом вверху страницы
+
+.promo {
+  height: 613px;
+  background-color: rgba(232, 232, 232, 1);
+  background-image: url(img/promo.png);
+  background-repeat: no-repeat;
+  background-position: center -52px;
+  display: flex;
+  align-items: flex-start;
+
+  &__content {
+    margin-top: 224px;
+    border-left: 12px solid $mainColor;
+    padding-left: 12px;
+
+    &_h2 {
+      font-family: $fontFamily;
+      font-size: 60px;
+      font-weight: 900;
+      color: rgba(34, 34, 34, 1);
+      line-height: 45px;
+      letter-spacing: 0.03em;
+    }
+
+    &_text {
+      display: flex;
+      margin-top: 20px;
+
+      &_black {
+        font-family: $fontFamily;
+        font-size: 40px;
+        font-weight: 900;
+        color: rgba(34, 34, 34, 1);
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        margin-right: 7px;
+      }
+
+      &_red {
+        font-family: $fontFamily;
+        font-size: 40px;
+        font-weight: 900;
+        color: $mainColor;
+        letter-spacing: 0.03em;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+// категория товаров на странице 'index.html'
+
+.category {
+  margin: 98px 0 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__a {
+    width: auto;
+    height: auto;
+  }
+
+  &__banner {
+
+    &:hover {
+
+      .category__banner_badge {
+        background-color: $mainColor;
+      }
+
+      .category__banner_badge_p {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .category__banner_badge_h2 {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    &__1 {
+      height: 542px;
+      width: 560px;
+      background-image: url(img/man.png);
+      background-repeat: no-repeat;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    &__2 {
+      height: 261px;
+      width: 560px;
+      background-image: url(img/woman.png);
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    &__3 {
+      height: 261px;
+      width: 560px;
+      background-image: url(img/accesories.png);
+      background-repeat: no-repeat;
+      margin: 0 20px 0 0;
+      position: relative;
+    }
+
+    &__4 {
+      height: 542px;
+      width: 560px;
+      background-image: url(img/kids.png);
+      background-repeat: no-repeat;
+      margin: -282px 0 0 0;
+      position: relative;
+    }
+
+    &_badge {
+      height: 82px;
+      background-color: rgba(255, 255, 255, 1);
+      position: absolute;
+      margin-top: 26px;
+      padding: 0 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.4s;
+
+      &_p {
+        font-family: $fontFamily;
+        font-size: 18px;
+        font-weight: 900;
+        color: rgba(34, 34, 34, 1);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      &_h2 {
+        font-family: $fontFamily;
+        font-size: 30px;
+        font-weight: 900;
+        color: $mainColor;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// стилизация заголовка для каталога товара а 'index.html'
+
+.items__content {
+  font-family: $fontFamily;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 100px;
+  padding-bottom: 16px;
+
+  &__2 {
+    font-family: $fontFamily;
+    font-size: 14px;
+    color: rgba(159, 159, 159, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+
+// каталог товаров на странице 'index.html'
+
+.product-box {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+    width: 261px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:hover {
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .product__img {
+        filter: brightness(.4);
+    }
+
+    &:hover .product__star {
+        display: block;
+    }
+
+    &:hover .product__add {
+        display: flex;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__add {
+      font-size: 13px;
+      font-weight: bold;
+      color: #ffffff;
+      height: 39px;
+      width: 123px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 97px;
+      left: 70px;
+      position: absolute;
+      border: 1px solid #fff;
+
+      &:hover {
+        box-shadow: 0 0 5px #fff;
+      }
+    }
+
+    &__content {
+      padding: 19px 15px;
+      position: relative;
+    }
+
+    &__name {
+      font-size: 13px;
+      color: #222222;
+      text-transform: uppercase;
+    }
+
+    &__price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #f16d7f;
+      margin-top: 17px;
+      text-transform: uppercase;
+    }
+
+    &__star {
+      position: absolute;
+      bottom: 21px;
+      right: 15px;
+      display: none;
+    }
+}
+
+// кнопка 'browse all product' в 'index.html'
+
+.main__button {
+  margin-top: 0;
+}
+
+.button__2 {
+  height: 48px;
+  width: 212px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+
+}
+
+// блок со скидкой и доставкой
+
+.sale {
+  height: 529px;
+  display: flex;
+  margin: 113px 0 97px 0;
+
+  &__img__position {
+
+  }
+
+  &__img {
+
+  }
+}
+
+.feature__box {
+    background-color: rgba(34, 34, 36, 1);
+    width: 379px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+
+  &__position {
+    width: 373px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+}
+
+.feature__h3 {
+  font-family: $fontFamily;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(251, 251, 251, 1);
+  letter-spacing: 0.03em;
+}
+
+.feature__description {
+  width: 236px;
+  font-family: $fontFamily;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(251, 251, 251, 1);
+  letter-spacing: 0.03em;
+  line-height: 24px;
+}
+
+                          /* footer */
+
+// блок с комментарием и формой 'subscribe'
+
+.subscribe {
+  height: 438px;
+  background: url(img/subscribe.png), url(img/subscribe_background.png) no-repeat center bottom;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 109px;
+
+  &__content {
+    flex-grow: 1;
+
+    &:first-child {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  &__action {
+    display: flex;
+  }
+
+  &__heading {
+    font-family: $fontFamily;
+    font-size: 24px;
+    color: rgba(34, 34, 36, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: $fontFamily;
+    font-size: 14px;
+    color: rgba(34, 34, 36, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input {
+    height: 46px;
+    width: 334px;
+    background-color: rgba(225, 225, 225, 1);
+    border-radius: 23px;
+    border: none;
+    font-family: $fontFamily;
+    font-size: 14px;
+    color: rgba(34, 34, 36, 1);
+    letter-spacing: 0.03em;
+    line-height: 54px;
+    padding-left: 28px;
+    padding-right: 80px;
+    outline: none;
+  }
+
+  &__button {
+    height: 46px;
+    width: 104px;
+    background-color: $mainColor;
+    border-radius: 0 23px 23px 0;
+    border: none;
+    margin-left: -52px;
+    outline: none;
+
+    &__text {
+      font-family: $fontFamily;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 1);
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__img {
+    height: 83px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 83px;
+    margin-right: 27.98px;
+  }
+
+  &__text__right {
+    width: 426px;
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(34, 34, 36, 1);
+    letter-spacing: 0.03em;
+    line-height: 26px;
+  }
+
+  &__name {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(241, 109, 127, 1);
+    letter-spacing: 0.03em;
+    line-height: 26px;
+  }
+
+  &__location {
+    font-family: $fontFamily;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(34, 34, 36, 1);
+    letter-spacing: 0.03em;
+    line-height: 14px;
+    margin-bottom: 41px;
+  }
+}
+
+.inform {
+  height: 349px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo__inform {
+    margin-top: 20px;
+  }
+
+  .logo__inform__button {
+    margin-bottom: 29px;
+  }
+
+    &__content__text {
+      width: 430px;
+      font-family: $fontFamily;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(137, 137, 137, 1);
+      letter-spacing: 0.03em;
+      line-height: 24px;
+    }
+    &__content__text__1 {
+      margin: 0 0 20px 0;
+    }
+
+  &__nav__position {
+    width: 839px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  &__nav__1 {
+    width: 103px;
+    box-sizing: border-box;
+    margin: 14px 129px 0 61.4px;
+  }
+
+  &__nav__2 {
+    width: 147px;
+    box-sizing: border-box;
+    margin: 14px 80px 0 0;
+  }
+
+  &__nav__3 {
+    width: 155px;
+    box-sizing: border-box;
+    margin: 14px -166px 0px 0;
+  }
+
+  &__h3 {
+    font-family: $fontFamily;
+    font-size: 18px;
+    font-weight: bold;
+    color: $mainColor;
+    letter-spacing: 0.03em;
+    line-height: 26px;
+    height: 14px;
+    margin-bottom: 45px;
+  }
+
+  &__ul {
+    list-style-type: none;
+  }
+
+  &__list {
+    text-decoration: none;
+  }
+
+  &__link {
+    font-family: $fontFamily;
+    font-size: 16px;
+    color: rgba(137, 137, 137, 1);
+    letter-spacing: 0.03em;
+    line-height: 42px;
+    transition: 0.3s;
+
+    &:hover {
+      font-family: $fontFamily;
+      font-size: 16px;
+      color: $mainColor;
+      text-align: right;
+      letter-spacing: 0.03em;
+    }
+  }
+
+}
+
+// самый нижний футер с ссылками на соц. сети
+
+.footer__bottom {
+  height: 79px;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icon {
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #b2b2b2;
+    margin-right: 8px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #f7f7f8;
+      background-color: #f16d7f;
+    }
+  }
+}
+
+                          /* product */
+
+.catalog {
+  padding-top: 59px;
+  display: grid;
+  grid-template-areas: "a a a b b b b b b b b b"
+                       "a a a c c c c c c c c c"
+                       "a a a c c c c c c c c c";
+
+  &__content {
+    width: 846px;
+    grid-area: c;
+  }
+}
+
+.product-parameters {
+  grid-area: b;
+  display: grid;
+  grid-template-areas: "d d d e e e f f f"
+                       "g g g g g g g g g";
+
+  &__ternding {
+    grid-area: d;
+    grid-column: 1 / 3 (3fr);
+
+    &_heading {
+      font-family: $fontFamily;
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(111, 110, 110, 1);
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    &__block {
+      width: 66px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__text {
+
+        border-right: 1px solid;
+        padding-right: 10px;
+
+        &_p {
+          font-family: $fontFamily;
+          font-size: 14px;
+          color: rgba(111, 110, 110, 1);
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  &__size {
+    grid-area: e;
+  }
+
+  &__prise {
+    grid-area: f;
+  }
+
+  &__sort {
+    grid-area: g;
+  }
+}
+
+.aside {
+  grid-area: a;
+  width: 243px;
+
+  &__name {
+    font-size: 14px;
+    font-family: $fontFamily;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 37px;
+    line-height: 37px;
+    border-bottom: 1px solid #ebebeb;
+    border-left: 5px solid $mainColor;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 0 11px;
+    outline: none;
+    transition: 0.4s;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '\25BC';
+      color: #6f6e6e;
+      font-size: 12px;
+    }
+  }
+
+  &__ul {
+    list-style-type: none;
+  }
+
+  &__link {
+    font-family: $fontFamily;
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 33px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+
+  &__sort {
+    transition: 0.4s;
+  }
+
+  &__sort[open] summary {
+    color: $mainColor;
+  }
+
+  &__sort[open]>summary::after {
+    content: '\25B2';
+  }
+
+  &__sort>summary:hover {
+    background-color: $mainColor;
+    color: white;
+  }
+}
+
+
+
+
+                          /* single-page */
+
+// блок с большой картинкой
+
+.single-page__slider {
+  height: 777px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  border: 1px solid #ececec;
+
+  &_img {
+    margin-bottom: 42px;
+    margin-top: 11px;
+  }
+
+  &_arrow {
+    height: 47px;
+    width: 47px;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    transition: 0.3s;
+
+    &:hover {
+      color: red;
+      background-color: white;
+    }
+  }
+}
+
+// блок описания товара
+
+.main-block {
+  height: 730px;
+  width: 1141px;
+  margin: 0 auto;
+  margin-top: -86px;
+  margin-bottom: 119px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ececec;
+
+  &__heading {
+    margin-top: 73px;
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(241, 109, 127, 1);
+    line-height: 24px;
+    border-bottom: 1px solid;
+    margin-bottom: 18px;
+  }
+
+  &__h2 {
+    font-family: $fontFamily;
+    font-size: 18px;
+    font-weight: 900;
+    color: rgba(77, 77, 77, 1);
+    text-align: center;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 62px;
+  }
+
+  &__p {
+    width: 626px;
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(94, 94, 94, 1);
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__info {
+    margin-top: 32px;
+    width: 626px;
+    display: flex;
+    justify-content: space-around;
+
+    &_type {
+      width: 140px;
+      display: flex;
+      align-items: baseline;
+
+      &_light {
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(185, 185, 185, 1);
+        margin-right: 8px;
+      }
+
+      &_dark {
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(47, 47, 47, 1);
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__prise {
+    font-family: $fontFamily;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(239, 91, 112, 1);
+    line-height: 24px;
+    margin-top: 37px;
+    text-align: center;
+    padding-bottom: 43px;
+    width: 642px;
+    border-bottom: 1px solid rgba(234, 234, 234, 1);
+  }
+
+  &__button {
+
+    &_cart {
+      height: 55px;
+      width: 537px;
+      outline: none;
+      background-color: white;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(239, 91, 112, 1);
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &__link {
+      height: 55px;
+      width: 537px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 197px;
+
+      &_img {
+        height: 24px;
+        width: 26px;
+
+      }
+
+      &_text {
+        font-family: $fontFamily;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(239, 91, 112, 1);
+      }
+    }
+  }
+}
+
+// фильтр товаров
+
+.filter {
+  margin-top: 63px;
+  margin-bottom: 28px;
+  width: 538px;
+  display: flex;
+  justify-content: space-between;
+
+  &__heading {
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(47, 47, 47, 1);
+    line-height: 24px;
+  }
+
+  &__details {
+    margin-top: 16px;
+    height: 35px;
+    width: 144px;
+    border: 1px solid rgba(234, 234, 234, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & summary::-webkit-details-marker {
+      display: none;
+    }
+
+    & summary::after {
+      content: '\25b9';
+    }
+
+    &[open]>summary::after {
+      content: '\25bf';
+    }
+
+    &_color {
+      height: 12px;
+      width: 12px;
+      background-color: $mainColor;
+    }
+
+    &_name {
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(188, 188, 188, 1);
+      line-height: 24px;
+      height: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+
+      &_p {
+        font-family: $fontFamily;
+        font-size: 13px;
+        color: rgba(188, 188, 188, 1);
+        line-height: 24px;
+        padding: 0 12px;
+      }
+    }
+
+    &_input {
+      height: 35px;
+      margin-top: 16px;
+      font-family: $fontFamily;
+      font-size: 14px;
+      color: rgba(188, 188, 188, 1);
+      line-height: 24px;
+      outline: none;
+      padding-left: 12px;
+      border: 1px solid rgba(234, 234, 234, 1);
+    }
+  }
+}
+
+/* блок с каталогом товаров */
+
+.single-page__catalog {
+  margin-bottom: 73px;
+
+  &_h2 {
+    font-family: $mainColor;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgba(77, 77, 77, 1);
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 72px;
+  }
+}
+
+                          /* catalog */
+
+// поднавигация
+
+.breadcrumb {
+  height: 148px;
+  background-color: #f8f3f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__heading {
+    font-family: $fontFamily;
+    font-size: 24px;
+    font-weight: 900;
+    color: $mainColor;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(99, 99, 99, 1);
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+
+  &__ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__list:not(:last-child):after {
+    content: '/';
+  }
+}
+
+// блок с формами
+
+.address {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 89px;
+  margin-bottom: 79px;
+
+  &__side {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__shipping {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    text-transform: uppercase;
+  }
+
+  &__checkout {
+
+    margin-left: 35px;
+
+    &_h5 {
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(34, 34, 34, 1);
+      text-transform: uppercase;
+      margin-top: 39px;
+    }
+
+    &_p {
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(179, 178, 178, 1);
+      line-height: 20px;
+      margin-top: 15px;
+    }
+
+    &__radio {
+      display: flex;
+      margin-top: 34px;
+      margin-left: -1px;
+
+      &_2 {
+        margin-top: 20px;
+      }
+    }
+
+    &__radio label {
+      margin-left: 14px;
+      height: 10px;
+      cursor: pointer;
+      user-select: none;
+      font-family: $fontFamily;
+      font-size: 12px;
+      color: rgba(34, 34, 34, 1);
+      text-transform: uppercase;
+    }
+  }
+
+  &__register {
+    margin-top: 33px;
+    margin-left: 35px;
+    font-family: $fontFamily;
+    font-size: 13px;
+    color: rgba(34, 34, 34, 1);
+    text-transform: uppercase;
+
+    &_p {
+      margin-top: 15px;
+      margin-left: 35px;
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(179, 178, 178, 1);
+      line-height: 20px;
+    }
+
+    &_drop {
+      margin-top: 33px;
+      margin-left: 35px;
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(179, 178, 178, 1);
+      line-height: 20px;
+      width: 148px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &_1 {
+        margin-top: 15px;
+        width: 264px;
+      }
+    }
+  }
+
+  &__button {
+
+    &_left {
+      height: 50px;
+      width: 180px;
+      margin-top: 38px;
+      margin-left: 35px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(234, 234, 234, 1);
+      outline: none;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $mainColor;
+        box-shadow: 0 15px 15px -10px rgba(0,0,0, .5);
+      }
+
+      &_text {
+        height: 50px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(74, 74, 74, 1);
+        text-transform: uppercase;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    height: 445.6px;
+    //justify-content: space-between;
+    width: 390px;
+
+    &_h2 {
+      margin-top: 32px;
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(34, 34, 34, 1);
+      text-transform: uppercase;
+    }
+
+    &_p {
+      margin-top: 15px;
+      font-family: $fontFamily;
+      font-size: 13px;
+      color: rgba(179, 178, 178, 1);
+      line-height: 20px;
+    }
+
+    &_text {
+      margin-top: 23px;
+      font-family: $fontFamily;
+      font-size: 12px;
+      color: rgba(34, 34, 34, 1);
+      line-height: 20px;
+      text-transform: uppercase;
+
+      &_required:after {
+        color: rgba(255, 13, 13, 1);
+        content: " *";
+      }
+    }
+  }
+
+  &__place {
+    display: flex;
+    flex-direction: column;
+
+    &_form {
+      margin-bottom: 16px;
+      height: 45px;
+      width: 390px;
+      margin-top: 16px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(234, 234, 234, 1);
+      outline: none;
+      padding-right: 32px;
+      padding-left: 32px;
+      font-family: $fontFamily;
+      font-size: 14px;
+      color: rgba(34, 34, 36, 1);
+      text-align: left;
+      letter-spacing: 0.03em;
+      line-height: 54px;
+    }
+  }
+
+  &__required-text {
+    margin-top: 23px;
+    margin-bottom: 32px;
+    font-family: $fontFamily;
+    font-size: 13px;
+    color: rgba(255, 13, 13, 1);
+    line-height: 20px;
+  }
+
+  &__confirm-2 {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &_button {
+      height: 50px;
+      width: 180px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(234, 234, 234, 1);
+      outline: none;
+      transition: 0.4s;
+
+      &:hover {
+        background-color: $mainColor;
+        box-shadow: 0 15px 15px -10px rgba(0,0,0, .5);
+      }
+
+      &_text {
+        height: 50px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(74, 74, 74, 1);
+        text-transform: uppercase;
+        transition: 0.4s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    &_question {
+      font-family: $fontFamily;
+      font-size: 14px;
+      color: rgba(34, 34, 34, 1);
+      line-height: 20px;
+      text-decoration: none;
+      transition: 0.4s;
+      height: 50px;
+      width: 180px;
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+
+  &__confirm_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// стилизация пунктов плана
+
+.checkout__items {
+  margin-top: 79px;
+  margin-bottom: 93px;
+  height: 367px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_item {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    line-height: 72px;
+    text-transform: uppercase;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
