@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 3</title>
+</head>
+<body>
+
+    <button onclick="order()">Task 1</button>
+    <button onclick="numbers()">Task 2</button>
+    <button onclick="pyramid()">Task 3</button>
+
+    <script>
+
+        // task 1
+        function order() {
+            let a = 1;
+            let b = 100;
+            while (a <= b) {
+                console.log(a++);
+            }
+        }
+
+        // task 2
+        function numbers() {
+            for (let i = 0; i <= 9; i++)
+                console.log(i);
+        }
+
+        // task 3
+        function pyramid() {
+            let str = '';
+            for (let i = 1; i <=20; i++) {
+                str = str + 'x';
+                console.log(str);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+}
+
+.center {
+  padding: 0 calc(50% - 570px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 100px;
+  background-color: #B00032;
+}
+
+.mainDrop_name {
+  height: 38px;
+  width: 130px;
+  box-sizing: border-box;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  background-color: #452986;
+  text-align: right;
+  letter-spacing: 0.03em;
+  line-height: 32px;
+  outline: none;
+  padding: 0 3px 0 8px;
+}
+.mainDrop_name::-webkit-details-marker {
+  display: none;
+}
+.mainDrop_name::after {
+  content: "⮞";
+  color: #6f6e6e;
+  font-size: 12px;
+}
+.mainDrop[open] > summary::after {
+  content: "⮟";
+}
+.mainDrop__tasks {
+  list-style-type: none;
+}
+.mainDrop__tasks__list {
+  width: 200px;
+  box-sizing: border-box;
+  background-color: silver;
+}
+
+.lessons {
+  height: 100vh;
+  background-image: linear-gradient(45deg, #8e618c, #e27a6d);
+  display: flex;
+}
+.lessons__task {
+  font-family: "Lato";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style2.css.map */

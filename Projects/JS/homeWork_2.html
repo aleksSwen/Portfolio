@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+    <button onclick="calc()">Task 3</button>
+    <button onclick="orderNumber()">Task 4</button>
+    <button onclick="getOperation()">Task 5</button>
+    <button onclick="mathOperation()">Task 6</button>
+    <button onclick="powerAnswer()">Task 8</button>
+    <button onclick="game()">Task 9</button>
+
+    <script>
+
+        // task 3
+        function calc() {
+            let a = +prompt("Введите любое число:");
+            let b = +prompt("Введите любое число:");
+            let c;
+            let d = Math.sign(0);
+            if (a == 0) {
+                a = d;
+                c = d + b;
+                console.log(c);
+            }
+            else if (b == 0) {
+                b = d;
+                c = a + d;
+                console.log(c);
+            }
+            else if (calc_2()) {
+
+            }
+
+            function calc_2() {
+                if (a > 0 && b > 0) {
+                    c = a + b;
+                }
+                else if (a < 0 && b < 0) {
+                    c = a * b;
+                }
+                return (c);
+            }
+            console.log(calc_2());
+        }
+
+
+        // task 4
+        function orderNumber(a) {
+            a = +prompt("Введите число от одного до 15:")
+            switch (a) {
+                case 1:
+                    console.log("Ваше число: 1");
+                    break;
+                case 2:
+                    console.log("Ваше число: 2");
+                    break;
+                case 3:
+                    console.log("Ваше число: 3");
+                    break;
+                case 4:
+                    console.log("Ваше число: 4");
+                    break;
+                case 5:
+                    console.log("Ваше число: 5");
+                    break;
+                case 6:
+                    console.log("Ваше число: 6");
+                    break;
+                case 7:
+                    console.log("Ваше число: 7");
+                    break;
+                case 8:
+                    console.log("Ваше число: 8");
+                    break;
+                case 9:
+                    console.log("Ваше число: 9");
+                    break;
+                case 10:
+                    console.log("Ваше число: 10");
+                    break;
+                case 11:
+                    console.log("Ваше число: 11");
+                    break;
+                case 12:
+                    console.log("Ваше число: 12");
+                    break;
+                case 13:
+                    console.log("Ваше число: 13");
+                    break;
+                case 14:
+                    console.log("Ваше число: 14");
+                    break;
+                case 15:
+                    console.log("Ваше число: 15");
+                    break;
+            }
+        }
+
+
+        // task 5
+        function addition (a, b) {
+            return a + b;
+        }
+
+        function subtraction (a, b) {
+            return a - b;
+        }
+
+        function division (a, b) {
+            return a / b;
+        }
+
+        function multiplication (a, b) {
+            return a * b;
+        }
+
+        function getOperation() {
+            console.log(addition(10, 5));
+            console.log(subtraction(10, 5));
+            console.log(division(10, 5));
+            console.log(multiplication(10, 5));
+        }
+
+
+        // task 6
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return addition(arg1, arg2);
+                case "-":
+                    return subtraction(arg1, arg2);
+                case "*":
+                    return multiplication(arg1, arg2);
+                case "/":
+                    return division(arg1, arg2);
+            }
+            console.log(mathOperation(10, 5, "+"));
+            console.log(mathOperation(10, 5, "-"));
+            console.log(mathOperation(10, 5, "*"));
+            console.log(mathOperation(10, 5, "/"));
+        }
+
+
+        // task 8
+        function power(val, pow) {
+
+            if(pow == 1 ) {
+                return val;
+            }
+            else if(pow == 0) {
+                return 1;
+            }
+            else {
+                return val * power(val, pow - 1);
+            }
+        }
+
+        function powerAnswer() {
+
+            console.log(power(2, 2));
+            console.log(power(2, 1));
+            console.log(power(2, 0));
+        }
+
+
+        // task 9
+        function stone(player, pc) {
+            player = +prompt("Введите одно из трех значений: камень = 1, ножницы = 2, бумага = 3");
+            pc = Math.round(Math.random() * 3);
+
+            if((player == 1 || player == 2 || player == 3) && (pc == 2 || pc == 3 || pc == 1)) {
+                console.log("Выйграл Игрок");
+            }
+            else if((player == 1 || player == 2 || player == 3) && (pc == 1 || pc == 2 || pc == 3)) {
+                console.log("Ничья!")
+            }
+            else if(player > 3 || player < 1) {
+                console.log("Введите значение из условия");
+                return stone();
+            }
+            else {
+                console.log("Выиграл компьютер")
+            }
+        }
+
+        function game() {
+            return stone();
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header center"></header>
+    <div class="lessons center">
+        <details class="mainDrop">
+            <summary class="mainDrop_name">First Lesson</summary>
+            <ul class="mainDrop__tasks">
+                <li class="mainDrop__tasks__list"><button onclick="gramToKilo()" class="lessons__task">weight Converter</button></li>
+                <li class="mainDrop__tasks__list"><button onclick="tfToTc()" class="lessons__task">temperature Converter</button></li>
+                <li class="mainDrop__tasks__list"><button onclick="nameAdmin()" class="lessons__task">Name</button></li>
+            </ul>
+        </details>
+
+    </div>
+
+    <script class="weight">
+        function gramToKilo() {
+            let gram = +prompt('Сколько нужно грамм?');
+            let kilo = gram / 1000;
+
+            confirm(`Ваш вес равен ${kilo} кг.`);
+        }
+    </script>
+    <script class="temperature">
+        function tfToTc() {
+            let tC = +prompt('Введите температуру по Цельсию.');
+            let tF = (9 / 5) * tC + 32;
+
+            confirm(`Температура по Фаренгейту равна ${tF} градусов.`)
+        }
+    </script>
+    <script class="name">
+        function nameAdmin() {
+            let name = 'Василий';
+            let admin = name;
+
+            confirm (admin);
+        }
+    </script>
+
+
+</body>
+</html>

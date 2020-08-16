@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.lessons {
+  width: 500px;
+  height: 500px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &__task {
+    height: 85px;
+    width: 200px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #B00032;
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: white;
+      color: #B00032;
+    }
+
+    &:focus {
+      background-color: #452986;
+      color: white;
+    }
+  }
+
+  &__text {
+    width: 400px;
+
+    &_p {
+      font-size: 22px;
+      font-family: 'Work Sans', sans-serif;
+    }
+  }
+}

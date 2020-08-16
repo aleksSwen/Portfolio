@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="lessons center">
+        <button onclick="gramToKilo()" class="lessons__task">Weight converter</button>
+        <button onclick="tfToTc()" class="lessons__task">Temperature converter</button>
+        <button onclick="nameAdmin()" class="lessons__task">Name</button>
+        <div class="lessons__text">
+            <p class="lessons__text_p">4 задание.<br>
+                Выражение 1000 + "108" <b>будет содержать строку 1000108</b>, т.к. интерпретатор столкнется с несовместимостью типов данных и попытается преобразовать переменные к одному типу данных (преобразует число 1000 к строковому типу) и затем выполнит конкатенацию строк.
+            </p>
+        </div>
+    </div>
+
+    <script defer class="weight">
+        function gramToKilo() {
+            let gram = +prompt('Сколько нужно грамм?');
+            let kilo = gram / 1000;
+
+            confirm(`Ваш вес равен ${kilo.toFixed(3)} кг.`);
+        }
+    </script>
+    <script defer class="temperature">
+        function tfToTc() {
+            let tC = +prompt('Введите температуру по Цельсию.');
+            let tF = (9 / 5) * tC + 32;
+
+            confirm(`Температура по Фаренгейту равна ${tF.toFixed(1)} градусов.`)
+        }
+    </script>
+
+    <!--этот скрипт вывел в консоль-->
+    <script defer class="name">
+        function nameAdmin() {
+            let name = 'Василий';
+            let admin = name;
+
+            console.log(admin);
+        }
+    </script>
+</body>
+</html>

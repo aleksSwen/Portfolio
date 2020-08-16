@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        const imgURL = 'https://raw.githubusercontent.com/aleksSwen/static/master/img/'
+
+        let CLOTHES = [
+            'Mango T-Shirt',
+            'Apple T-Shirt',
+            'Avocado T-Shirt',
+            'Banana T-Shirt',
+            'Grapefruit T-Shirt',
+            'Grapes T-Shirt',
+            'Kiwi T-Shirt',
+            'Lime T-Shirt'
+        ];
+        let PRICE = [ 52, 53, 56, 57, 124, 59, 55, 23];
+
+        function getArrayOfObjects() {
+            let local = [];
+
+            for (let i = 0; i < CLOTHES.length; i++) {
+                local.push({
+                    productCloth: CLOTHES[i],
+                    productPrice: PRICE[i],
+                    productImg: `${imgURL}main_index_img_${i + 1}.png`,
+                    productId: 'prod_' + i
+                })
+            }
+            return local;
+        }
+
+        let catalog = {
+            items: [],
+            init() {
+                this._fillCatalog();
+            },
+            _fillCatalog() {
+                this.items = getArrayOfObjects();
+            }
+        }
+
+    </script>
+</body>
+</html>
